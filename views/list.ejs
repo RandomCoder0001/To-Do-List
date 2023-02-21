@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>To-Do List</title>
+</head>
+<body>
+    <h1> <%= key %> World</h1>
+    <form action="/" method="post">
+        <label for="Enter"></label>
+        <input type="text" name="list_item" id="Enter">
+    </form>
+    <ul>
+        <%for(var i = 0; i <list_items.length; i++){%>
+            <li><%= list_items[i]%></li>
+        <%}%>
+    </ul>
+</body>
+</html>
