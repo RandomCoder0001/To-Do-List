@@ -8,15 +8,23 @@
     <title>To-Do List</title>
 </head>
 <body>
-    <h1> <%= key %> World</h1>
-    <form action="/" method="post">
-        <label for="Enter"></label>
-        <input type="text" name="list_item" id="Enter">
-    </form>
-    <ul>
+    <div class="box" id="heading">
+        <h1> <%= ListTitle %></h1>
+    </div>
+    <div class="box">
+
         <%for(var i = 0; i <list_items.length; i++){%>
-            <li><%= list_items[i]%></li>
+            <div class="item">
+                <input type="checkbox">
+                <p><%= list_items[i]%><p>
+                </div>
         <%}%>
-    </ul>
+        <form action="/" method="post" class = item>
+            <label for="Enter"></label>
+            <input type="text" name="list_item" id="Enter" placeholder="New Item" autocomplete="off">
+            <button type="submit" name = "list" value= <%= ListTitle %>>+</button>
+        </form>
+    </div>
+    
 </body>
 </html>
